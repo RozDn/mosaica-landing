@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mosaica — AI-Powered German Learning, Anywhere</title>
+<meta name="description" content="Mosaica turns any photo into structured German flashcards — vocabulary, grammar notes and CEFR-level labels, instantly. Built for migrants, students, expats and language institutions worldwide." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/mosaica-icon-ink.png" />
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Mosaica home">
+      <img src="assets/mosaica-mark.png" alt="" />
+      <span class="wordmark">Mosaica</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#showcase">Who it's for</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://app.mosaica.at/" target="_blank" class="btn btn-primary">Try the app</a>
+      <button class="btn btn-ghost nav-toggle" id="navToggle" aria-label="Menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">AI-Assisted German Learning</span>
+      <h1 class="reveal" data-delay="1">Turn any photo into German <em>flashcards</em>.</h1>
+      <p class="hero-sub reveal" data-delay="2">Mosaica is an AI-powered German learning platform built for migrants, refugees, students and expats in Austria. Upload a photo from your daily life — get structured vocabulary, grammar notes and CEFR-level cards, instantly.</p>
+      <div class="hero-actions reveal" data-delay="3">
+        <a href="https://app.mosaica.at/" target="_blank" class="btn btn-primary" style="padding:14px 30px;font-size:17px;">Try the web app →</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-proof reveal" data-delay="4">
+        <div class="proof-tiles"><span></span><span></span><span></span><span></span></div>
+        <p>For the <b>15.4 million people worldwide learning German</b> — migrants, students, expats and anyone who needs the language for real life, not just the classroom.</p>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-glow"></div>
+      <div class="float-layer" id="floatLayer"></div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-top">
+            <h4>Arztpraxis</h4>
+            <span>A1 · 12 cards</span>
+          </div>
+          <p class="app-sub">Healthcare German — generated from your photo.</p>
+          <div class="app-mosaic" id="appMosaic"></div>
+          <div class="app-bar">
+            <i class="on"></i><i></i><i></i><i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="section-pad" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What Mosaica does</span>
+      <h2>German learning rooted in real life.</h2>
+      <p>Not another generic vocab app. Mosaica connects language to the concrete situations you actually face — the doctor's office, the Meldezettel, the supermarket queue.</p>
+    </div>
+    <div class="features-grid">
+      <article class="feature reveal" data-delay="1">
+        <div class="feature-icon" data-pattern="0,4,8" data-color="#C2703B"></div>
+        <h3>Photo → Flashcard</h3>
+        <p>Upload any photo — a room, a menu, a sign, a textbook page — and Mosaica generates structured German learning cards from the scene automatically.</p>
+      </article>
+      <article class="feature reveal" data-delay="2">
+        <div class="feature-icon" data-pattern="1,3,5,7" data-color="#4F6A78"></div>
+        <h3>Scenario collections</h3>
+        <p>Content organised around the situations that matter: healthcare, public administration, housing, university life, workplace German and everyday shopping.</p>
+      </article>
+      <article class="feature reveal" data-delay="3">
+        <div class="feature-icon" data-pattern="0,1,2,4,6,8" data-color="#C99A33"></div>
+        <h3>CEFR-oriented cards</h3>
+        <p>Every card is tagged to A1/A2 levels based on Goethe-Institut vocabulary lists, with grammar notes on cases, prepositions and spatial expressions.</p>
+      </article>
+      <article class="feature reveal" data-delay="4">
+        <div class="feature-icon" data-pattern="0,2,3,5,6,8" data-color="#7E8A63"></div>
+        <h3>Teacher-validated library</h3>
+        <p>AI generates the first draft — German teachers review and approve content before it enters the official learning library. Quality you can trust.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="section-pad ink-section" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>From photo to flashcard in three steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" data-delay="1">
+        <span class="step-num">STEP 01</span>
+        <div class="step-art" data-step-art="capture"></div>
+        <h3>Upload a photo</h3>
+        <p>Take a picture of any real-life scene — your apartment, a doctor's form, a supermarket shelf. Or simply describe a situation in text.</p>
+      </div>
+      <div class="step reveal" data-delay="2">
+        <span class="step-num">STEP 02</span>
+        <div class="step-art" data-step-art="arrange"></div>
+        <h3>AI extracts the scene</h3>
+        <p>Mosaica's AI identifies objects and spatial relationships, retrieves CEFR-oriented vocabulary and grammar rules, then generates structured learning cards.</p>
+      </div>
+      <div class="step reveal" data-delay="3">
+        <span class="step-num">STEP 03</span>
+        <div class="step-art" data-step-art="reflect"></div>
+        <h3>Learn and save</h3>
+        <p>Review vocabulary, example sentences and grammar notes tied to the actual scene. Save cards and revisit them — your personal German library grows with you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SHOWCASE ================= -->
+<section class="section-pad" id="showcase">
+  <div class="wrap showcase-grid">
+    <div class="wall reveal" id="wall"></div>
+    <div class="showcase-copy reveal" data-delay="1">
+      <span class="eyebrow">Who it's for</span>
+      <h2>German learners who need the language for real life.</h2>
+      <p>Migrants navigating a new system. International students. Expats in the workplace. Refugees learning to communicate. Duolingo teaches you the wrong German. Mosaica starts from the situations you actually face — and builds language from there.</p>
+      <div class="showcase-stats">
+        <div class="stat"><div class="n">15.4M</div><div class="l">people learning German worldwide (Goethe-Institut)</div></div>
+        <div class="stat"><div class="n">267K</div><div class="l">attended Goethe-Institut courses in 2024</div></div>
+        <div class="stat"><div class="n">7M+</div><div class="l">visits to Goethe-Institut digital platform in 2024</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= FAQ ================= -->
+<section class="section-pad" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Good questions</span>
+      <h2>Everything else.</h2>
+    </div>
+    <div class="faq reveal" data-delay="1">
+      <div class="faq-item">
+        <button class="faq-q">Who is Mosaica built for?</button>
+        <div class="faq-a"><p>Primarily for migrants, refugees, international students, foreign workers and expats in Austria who need practical German for everyday life — registering an address, visiting a doctor, navigating the workplace or communicating with schools. Language schools and integration-course providers also use Mosaica as a classroom supplement and content-production tool.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does the photo-to-flashcard feature work?</button>
+        <div class="faq-a"><p>You upload a photo — a room, a menu, a form, a sign — and Mosaica's AI identifies objects and spatial relationships in the scene. It retrieves CEFR-oriented vocabulary, grammar rules and common learner errors, then generates structured flashcards with vocabulary, example sentences and grammar notes at A1/A2 level.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are the flashcards reviewed by human teachers?</button>
+        <div class="faq-a"><p>Yes. AI generates a first draft, but selected cards are reviewed, corrected and approved by qualified German teachers before entering the official learning library. This teacher-validation workflow is central to Mosaica's quality promise — it's a supplement to teachers, not a replacement for them.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What CEFR levels does Mosaica cover?</button>
+        <div class="faq-a"><p>The current focus is A1 and A2 — the levels most relevant for integration, everyday communication and early course requirements in Austria. CEFR tagging is based on Goethe-Institut vocabulary lists, with planned teacher review to improve accuracy as the platform grows.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can institutions and language schools use Mosaica?</button>
+        <div class="faq-a"><p>Absolutely — institutional use is Mosaica's primary commercial focus. Language schools, integration-course providers and university language centers can license learner seats for use as an after-class practice tool. <a href="#contact" style="color:var(--accent)">Get in touch via our contact form</a> to discuss a pilot.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where can I try the product?</button>
+        <div class="faq-a"><p>The web MVP is live at <a href="https://app.mosaica.at/" target="_blank" style="color:var(--accent)">app.mosaica.at</a>. It demonstrates the core flashcard-generation logic and is used for early user testing and B2B pilot preparation. A mobile app (Android first, then iOS) is in development.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section-pad" style="background:var(--paper-2)" id="contact">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Try it, partner with us, or just say hello.</h2>
+      <p>Whether you're a learner, a German teacher, or an institution looking to pilot Mosaica — we'd love to hear from you.</p>
+    </div>
+    <div class="contact-form-wrap reveal" data-delay="1">
+      <div data-fs-success class="form-success" style="display:none">
+        <div class="success-icon">&#10003;</div>
+        <p><b>Message received!</b> We'll get back to you shortly.</p>
+      </div>
+      <div data-fs-error class="form-error-banner" style="display:none"></div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required data-fs-field />
+            <span class="field-error" data-fs-error="name"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required data-fs-field />
+            <span class="field-error" data-fs-error="email"></span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-role">I am a…</label>
+            <select id="cf-role" name="role" data-fs-field>
+              <option value="">Select your role</option>
+              <option value="German learner">German learner</option>
+              <option value="German teacher">German teacher</option>
+              <option value="Language school / institution">Language school / institution</option>
+              <option value="Potential partner or investor">Potential partner or investor</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-error" data-fs-error="role"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-org">Organisation <span style="font-weight:400;opacity:.6">(optional)</span></label>
+            <input type="text" id="cf-org" name="organisation" placeholder="School, university, company…" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="Tell us what you're looking for, or just say hi." required data-fs-field></textarea>
+          <span class="field-error" data-fs-error="message"></span>
+        </div>
+        <div class="form-footer">
+          <button type="submit" class="btn btn-primary" style="padding:14px 32px;font-size:17px;" data-fs-submit-btn>Send message</button>
+          <p class="form-note">We typically reply within 1–2 business days.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section-pad ink-section cta-final" id="download">
+  <div class="wrap">
+    <img class="mark-big reveal" src="assets/mosaica-mark.png" alt="Mosaica" />
+    <h2 class="reveal" data-delay="1">Start learning real German today.</h2>
+    <p class="reveal" data-delay="2">The web app is live. Take a photo of anything around you and get your first German flashcards in seconds — for free.</p>
+    <div class="cta-actions reveal" data-delay="3">
+      <a href="https://app.mosaica.at/" target="_blank" class="btn btn-primary" style="padding:16px 38px;font-size:18px;background:var(--paper);color:var(--ink);">Open app.mosaica.at →</a>
+      <a href="#contact" class="btn btn-ghost" style="color:var(--on-ink);border-color:var(--line-ink);">Partner with us</a>
+    </div>
+    <p class="reveal" data-delay="4" style="margin-top:22px;font-size:15px;color:var(--on-ink-soft);">Language schools &amp; integration-course providers — <a href="#contact" style="color:var(--gold);text-decoration:underline;">enquire about institutional pilots</a></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <img src="assets/mosaica-mark.png" alt="" style="height:30px" />
+          <span class="wordmark">Mosaica</span>
+        </a>
+        <p class="footer-about">AI-assisted German learning for migrants, students and expats in Austria. Built in Vienna.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#showcase">Who it's for</a>
+        <a href="https://app.mosaica.at/" target="_blank">Try the app</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#">For institutions</a>
+        <a href="#">Press kit</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="#faq">FAQ</a>
+        <a href="#">Privacy &amp; GDPR</a>
+        <a href="#">Terms</a>
+        <a href="https://app.mosaica.at/" target="_blank">Web app</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mosaica</span>
+      <span>Built for real German. For real life.</span>
+    </div>
+  </div>
+</footer>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#2A231D"/>
+    <g>
+      <rect x="32" y="32" width="9" height="9" rx="2" fill="#B0532E"/>
+      <rect x="45" y="32" width="9" height="9" rx="2" fill="#C99A33"/>
+      <rect x="58" y="32" width="9" height="9" rx="2" fill="#4F6A78"/>
+      <rect x="32" y="45" width="9" height="9" rx="2" fill="#C2703B"/>
+      <rect x="45" y="45" width="9" height="9" rx="2" fill="#E2D7B8"/>
+      <rect x="58" y="45" width="9" height="9" rx="2" fill="#7E8A63"/>
+      <rect x="32" y="58" width="9" height="9" rx="2" fill="#D2A93E"/>
+      <rect x="45" y="58" width="9" height="9" rx="2" fill="#9B3B2C"/>
+      <rect x="58" y="58" width="9" height="9" rx="2" fill="#CC8A5A"/>
+    </g>
+  </svg>
+</template>
+
+<script src="mosaic.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contactForm', formId: 'xaqzapjk' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
